@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inivak Server</title>
+    <title>Responsive Scrollable Packages</title>
     <style>
         /* General Styles */
         body {
@@ -24,7 +24,7 @@
         }
 
         .main-banner {
-          
+            
         }
 
         .main-banner h1 {
@@ -53,16 +53,24 @@
         }
 
         /* Scrollable Packages Section */
+        .packages-container {
+            display: flex;
+            justify-content: center;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 20px;
+        }
+
         .packages {
             display: flex;
+            flex-wrap: nowrap;
             gap: 20px;
-            overflow-x: auto;
-            padding: 20px;
-            scroll-behavior: smooth;
         }
 
         .package {
             min-width: 250px;
+            max-width: 300px;
             background: linear-gradient(135deg, #6c63ff, #ff6ec7);
             color: white;
             border-radius: 10px;
@@ -110,6 +118,21 @@
             background-color: #1a1a1a;
             color: white;
         }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .packages-container {
+                justify-content: center;
+            }
+
+            .packages {
+                justify-content: center;
+            }
+
+            .package {
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -132,42 +155,44 @@
     <!-- Scrollable Packages -->
     <div class="section">
         <h2>OUR PACKAGES / Mo</h2>
-        <div class="packages">
-            <div class="package">
-                <h3>SERVER PRO</h3>
-                <ul>
-                    <li>10 Product Add</li>
-                    <li>Order Connect WhatsApp</li>
-                    <li>Host & Domain Free</li>
-                    <li>No Hiding Fee</li>
-                    <li>24 Hours Support</li>
-                    <li>Google Map Connect</li>
-                </ul>
-                <button>BUY NOW</button>
-            </div>
-            <div class="package">
-                <h3>SERVER PRO</h3>
-                <ul>
-                    <li>10 Product Add</li>
-                    <li>Order Connect WhatsApp</li>
-                    <li>Host & Domain Free</li>
-                    <li>No Hiding Fee</li>
-                    <li>24 Hours Support</li>
-                    <li>Google Map Connect</li>
-                </ul>
-                <button>BUY NOW</button>
-            </div>
-            <div class="package">
-                <h3>SERVER PRO</h3>
-                <ul>
-                    <li>10 Product Add</li>
-                    <li>Order Connect WhatsApp</li>
-                    <li>Host & Domain Free</li>
-                    <li>No Hiding Fee</li>
-                    <li>24 Hours Support</li>
-                    <li>Google Map Connect</li>
-                </ul>
-                <button>BUY NOW</button>
+        <div class="packages-container">
+            <div class="packages">
+                <div class="package">
+                    <h3>SERVER PRO</h3>
+                    <ul>
+                        <li>10 Product Add</li>
+                        <li>Order Connect WhatsApp</li>
+                        <li>Host & Domain Free</li>
+                        <li>No Hiding Fee</li>
+                        <li>24 Hours Support</li>
+                        <li>Google Map Connect</li>
+                    </ul>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="package">
+                    <h3>SERVER PRO</h3>
+                    <ul>
+                        <li>10 Product Add</li>
+                        <li>Order Connect WhatsApp</li>
+                        <li>Host & Domain Free</li>
+                        <li>No Hiding Fee</li>
+                        <li>24 Hours Support</li>
+                        <li>Google Map Connect</li>
+                    </ul>
+                    <button>BUY NOW</button>
+                </div>
+                <div class="package">
+                    <h3>SERVER PRO</h3>
+                    <ul>
+                        <li>10 Product Add</li>
+                        <li>Order Connect WhatsApp</li>
+                        <li>Host & Domain Free</li>
+                        <li>No Hiding Fee</li>
+                        <li>24 Hours Support</li>
+                        <li>Google Map Connect</li>
+                    </ul>
+                    <button>BUY NOW</button>
+                </div>
             </div>
         </div>
     </div>
@@ -179,7 +204,7 @@
 
     <script>
         // JavaScript for scrolling packages section
-        document.querySelectorAll(".packages").forEach((container) => {
+        document.querySelectorAll(".packages-container").forEach((container) => {
             container.addEventListener("wheel", (event) => {
                 event.preventDefault();
                 container.scrollLeft += event.deltaY;
