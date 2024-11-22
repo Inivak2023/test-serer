@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inivak Server</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .main-banner {
+          
+        }
+
+        .main-banner h1 {
+            font-size: 3rem;
+        }
+
+        .main-banner a {
+            display: inline-block;
+            background-color: #6c63ff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        /* Scrollable Packages Section */
+        .packages {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .package {
+            min-width: 250px;
+            background: linear-gradient(135deg, #6c63ff, #ff6ec7);
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            flex: 0 0 auto;
+            text-align: left;
+        }
+
+        .package h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .package ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .package ul li {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .package button {
+            width: 100%;
+            background-color: #fff;
+            color: #6c63ff;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .package button:hover {
+            background-color: #6c63ff;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header>
+        <h1>INIVAK SERVER</h1>
+    </header>
+
+    <!-- Main Banner -->
+    <div class="main-banner">
+        <img src="Dark Purple Blue 3D Holographic Innovation of Motion Blog Banner .png" alt="" width="100%">
+    </div>
+
+    <!-- Service Section -->
+    <div class="section">
+        <h2>WHAT IS OUR SERVICE?</h2>
+        <p>Helping you run your business through Inivak Server...</p>
+    </div>
+
+    <!-- Scrollable Packages -->
+    <div class="section">
+        <h2>OUR PACKAGES / Mo</h2>
+        <div class="packages">
+            <div class="package">
+                <h3>SERVER PRO</h3>
+                <ul>
+                    <li>10 Product Add</li>
+                    <li>Order Connect WhatsApp</li>
+                    <li>Host & Domain Free</li>
+                    <li>No Hiding Fee</li>
+                    <li>24 Hours Support</li>
+                    <li>Google Map Connect</li>
+                </ul>
+                <button>BUY NOW</button>
+            </div>
+            <div class="package">
+                <h3>SERVER PRO</h3>
+                <ul>
+                    <li>10 Product Add</li>
+                    <li>Order Connect WhatsApp</li>
+                    <li>Host & Domain Free</li>
+                    <li>No Hiding Fee</li>
+                    <li>24 Hours Support</li>
+                    <li>Google Map Connect</li>
+                </ul>
+                <button>BUY NOW</button>
+            </div>
+            <div class="package">
+                <h3>SERVER PRO</h3>
+                <ul>
+                    <li>10 Product Add</li>
+                    <li>Order Connect WhatsApp</li>
+                    <li>Host & Domain Free</li>
+                    <li>No Hiding Fee</li>
+                    <li>24 Hours Support</li>
+                    <li>Google Map Connect</li>
+                </ul>
+                <button>BUY NOW</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>POWERED BY INIVAK | SUPPORT 0772520113</p>
+    </footer>
+
+    <script>
+        // JavaScript for scrolling packages section
+        document.querySelectorAll(".packages").forEach((container) => {
+            container.addEventListener("wheel", (event) => {
+                event.preventDefault();
+                container.scrollLeft += event.deltaY;
+            });
+        });
+    </script>
+</body>
+</html>
